@@ -20,6 +20,7 @@ For this project, my team used a set of parameters to practice calling an api an
   ## Highlights
 
   ![Full Screen View](images/4.png)
-  ![Modal in full screen](images/3.png)
   ![Mobile-Version](images/2.png)
   ![Mobile-Version with Modal](images/1.png)
+  ![Drop down Menu](images/3.png)
+  ![Modal with Information Chosen](images/5.png)
