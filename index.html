@@ -26,29 +26,30 @@
                           Please Choose
                         </button>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-                          <li class="dropDownText"><a class="dropdown-item homeworld" href="#">Homeworld</a></li>
-                          <li class="dropDownText"><a class="dropdown-item birthYear" data-bs-toggle="modal" data-bs-target="#modalBirthYearSelected" href="#">Birth Year</a></li>
-                          <li class="dropDownText"><a class="dropdown-item starships" href="#">Starships</a></li>
-                          <li class="dropDownText"><a class="dropdown-item films" href="#">Films</a></li>
+                          <li class="dropDownText"><a class="dropdown-item homeworld" name="#modalHomeworldSelected" href="#">Homeworld</a></li>
+                          <li class="dropDownText"><a class="dropdown-item birthYear" name="#modalBirthYearSelected" href="#">Birth Year</a></li>
+                          <li class="dropDownText"><a class="dropdown-item starships" name="#modalStarshipsSelected" href="#">Starships</a></li>
+                          <li class="dropDownText"><a class="dropdown-item films" name="#modalFilmsSelected" href="#">Films</a></li>
                         </ul>
                       </div>
                 </form>
                 </div>
+                <!-- Hidden -->
                 <div class="modal-body">
-                    <div class="modal fade" id="modalBirthYearSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div id="modalBirthYearSelected" class="hidden">
                     <p>Birth Year: <span id='modalBirthYear'></span></p>
                     </div>
-                    <div class="modal fade" id="modalHomeworldSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div id="modalHomeworldSelected" class="hidden">
                     <p>Homeworld: 
                         <ul id='modalHomeworld' class="clearModalUponClose"></ul>
                     </p>
                     </div>
-                    <div class="modal fade" id="modalStarshipsSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div id="modalStarshipsSelected" class="hidden">
                     <p>Starships: 
                         <ul id='starships' class="clearModalUponClose"></ul>
                     </p>
                     </div>
-                    <div class="modal fade" id="modalFilmsSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div id="modalFilmsSelected" class="hidden">
                     <p>Featured in these films:
                         <ul id="films" class="clearModalUponClose"></ul>
                     </p>
