@@ -26,12 +26,12 @@ function eventListener(imageButton, index) {
         event.preventDefault();
         const userAPISelection = characterIndex[index].apiNumber;
         getStarWarsPeople(userAPISelection);
-        const modalSelector = document.querySelector('#hiddenModal');
+
     })
 }
 
 function fillInModal(response) {
-    const {name, films, homeworld, starships, vehicles, birth_year} = response;
+    const {name, films, homeworld, starships, birth_year} = response;
     const modalTitle = document.querySelector('.modal-title');
     const modalBirthYear = document.querySelector('#modalBirthYear');
     modalTitle.innerHTML = name;
