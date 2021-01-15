@@ -4,64 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
     <title>Star Wars</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <main id="wrapper" class="main">
-        <h2>STAR WARS!!!</h2>
-        <div class="landingPage">
-            <div class="container">
-            <section> 
-            <ul class="image-list">
-                <li>>
-                    <img id="imageObiWan" src="/assets/obi-wan.jpg" alt="obi-wan"><button id="buttonObiWan">Choose Me!</button>
-                </li>
-                <li>
-                    <img id="imageLuke" src="assets/lukesky.jpeg" alt="lukesky"><button id="buttonLuke">Choose Me!</button>
-                </li>
-                <li>
-                    <img id="imageC3PO" src="assets/c3p0.jpg" alt="c3p0"><button id="buttonC3PO">Choose Me!</button>
-                </li>
-                <li>
-                    <img id="imageR2D2" src="assets/r2d2.png" alt="r2d2"><button id="buttonR2D2">Choose Me!</button>
-                </li>
-                <li>
-                    <img id="imageDarthVader" src="assets/darthvader.jpeg" alt="darthvader"><button
-                        id="buttonDarthVader">Choose Me!</button>
-                </li>
-                <li>
-                    <img id="imageLeia" src="assets/plea.jpeg" alt="plea"><button id="buttonLeia">Choose Me!</button>
-                </li>
-            </ul>
-        </div>
-        
-            </section>
-        <!-- Susan's Modal -->
-        <div class="hidden" id="hiddenModal">
-            <div class="modal" id="modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-                <!-- Modal Content -->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="ModalLabel">Character Information</h5>
-                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <h5 class="attributes" id="attributes"></h5>
-                        <form id="attributes" action="#" method="GET"></form>
-                    </div> 
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modalCharacter" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Birth Year: <span id='modalBirthYear'></span></p>
+                    <p>Homeworld: 
+                        <ul id='modalHomeworld' class="clearModalUponClose"></ul>
+                    </p>
+                    <p>Starships: 
+                        <ul id='starships' class="clearModalUponClose"></ul>
+                    </p>
+                    <p>Featured in these films:
+                        <ul id="films" class="clearModalUponClose"></ul>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                <button type="button" id="buttonClose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
-
+    </div>
+    <main id="wrapper" class="main">
+        <h1>Choose your STAR WARS character!</h2>
+        <div class="landingPage">
+            <div class="container"> 
+                <ul class="image-list">
+                    <li>>
+                        <button id="buttonObiWan" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageObiWan" src="assets2/obiwan.png" alt="obi-wan"></button>
+                    </li>
+                    <li>
+                        <button id="buttonLuke" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageLuke" src="assets2/luke.png" alt="lukesky"></button>
+                    </li>
+                    <li>
+                        <button id="buttonC3PO" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageC3PO" src="assets2/c3po.png" alt="c3p0"></button>
+                    </li>
+                    <li>
+                        <button id="buttonR2D2" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageR2D2" src="assets2/r2d2.png" alt="r2d2"></button>
+                    </li>
+                    <li>
+                        <button
+                            id="buttonDarthVader" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageDarthVader" src="assets2/darth.png" alt="darthvader"></button>
+                    </li>
+                    <li>
+                        <button id="buttonLeia" data-bs-toggle="modal" data-bs-target="#modalCharacter"><img id="imageLeia" src="assets2/leia.png" alt="leia"></button>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </main>
-
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 <script src=" js/get.js"></script>
 <script src="js/script.js"></script>
 
