@@ -32,7 +32,7 @@ function eventListener(imageButton, index) {
 
 function fillInModal(response) {
     const {name, films, homeworld, starships, birth_year} = response;
-    const modalTitle = document.querySelector('.modal-title');
+    const modalTitle = document.querySelector('#modalCharacterName');
     const modalBirthYear = document.querySelector('#modalBirthYear');
     modalTitle.innerHTML = name;
     modalBirthYear.innerHTML = birth_year;

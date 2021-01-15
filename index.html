@@ -17,20 +17,42 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel"></h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title" id="exampleModalLabel">What would you like to know about <span id="modalCharacterName"></span>?</h5>
+                </div>
+                <div>
+                <form action="select">
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                          Please Choose
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
+                          <li class="dropDownText"><a class="dropdown-item homeworld" href="#">Homeworld</a></li>
+                          <li class="dropDownText"><a class="dropdown-item birthYear" data-bs-toggle="modal" data-bs-target="#modalBirthYearSelected" href="#">Birth Year</a></li>
+                          <li class="dropDownText"><a class="dropdown-item starships" href="#">Starships</a></li>
+                          <li class="dropDownText"><a class="dropdown-item films" href="#">Films</a></li>
+                        </ul>
+                      </div>
+                </form>
                 </div>
                 <div class="modal-body">
+                    <div class="modal fade" id="modalBirthYearSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <p>Birth Year: <span id='modalBirthYear'></span></p>
+                    </div>
+                    <div class="modal fade" id="modalHomeworldSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <p>Homeworld: 
                         <ul id='modalHomeworld' class="clearModalUponClose"></ul>
                     </p>
+                    </div>
+                    <div class="modal fade" id="modalStarshipsSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <p>Starships: 
                         <ul id='starships' class="clearModalUponClose"></ul>
                     </p>
+                    </div>
+                    <div class="modal fade" id="modalFilmsSelected" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <p>Featured in these films:
                         <ul id="films" class="clearModalUponClose"></ul>
                     </p>
+                    </div>
                 </div>
                 <div class="modal-footer">
                 <button type="button" id="buttonClose" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
