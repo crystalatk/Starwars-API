@@ -34,7 +34,11 @@ function fillInModal(response) {
 }
 
 function getApiInforGeneral (url, selector) {
-    get(url).then(function (response) {
+    let urlToUse = url;
+    if (urlToUse.includes('http:')) {
+        urlToUse = url.replace('http', 'https');
+    }
+    get(urlToUse).then(function (response) {
         fillInDetails(response, selector);
     })
 }
