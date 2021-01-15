@@ -39,6 +39,10 @@ h1 {
   z-index: 2000;
 }
 
+h5 {
+  text-align: center;
+}
+
 button {
   background-color: transparent;
   border: none;
@@ -121,7 +125,7 @@ button:hover img {
   max-width: 70vw;
 }
 
-.modal-content li {
+.modal-body li {
   list-style-type: square;
 }
 
@@ -129,6 +133,29 @@ button:hover img {
   background-color: black;
   border: 1px solid chartreuse;
   color: chartreuse;
+}
+
+#dropdownMenuButton2 {
+  background-color: black;
+  border: 1px solid chartreuse;
+  color: chartreuse;
+}
+
+.dropDownText {
+  color: chartreuse;
+}
+
+.dropdown-item:hover {
+  background-color: chartreuse;
+  color: black;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block;
 }
 
 .modal-header {
