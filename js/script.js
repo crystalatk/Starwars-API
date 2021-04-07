@@ -10,7 +10,7 @@ function eventListener(imageButton, index) {
 }
 
 function getStarWarsPeople(apiNumber) {
-    const url = `https://swapi.dev/api/people/${apiNumber}`;
+    const url = `https://swapi.dev/api/people/${apiNumber}/`;
     get(url).then(function (response) {
         console.log(response);
         fillInModal(response);
